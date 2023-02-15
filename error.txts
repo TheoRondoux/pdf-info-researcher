@@ -1,0 +1,5 @@
+find: ‘history/rest.txt’: Aucun fichier ou dossier de ce type
+find: ‘history/test.txt’: Aucun fichier ou dossier de ce type
+find: ‘history/echo "This.txt’: Aucun fichier ou dossier de ce type
+find: ‘history/.txt’: Aucun fichier ou dossier de ce type
+find: ‘history/echo "This.txt’: Aucun fichier ou dossier de ce type

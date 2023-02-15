@@ -1,0 +1,2 @@
+/home/theo/.config/pdf_search/2223-Scripting_linux.pdf
+/home/theo/.config/pdf_search/ListeDeThèmes.pdf
