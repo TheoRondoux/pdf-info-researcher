@@ -1,0 +1,5 @@
+#Ignore history files
+history/*
+
+#Ignore errors
+errors.txt
