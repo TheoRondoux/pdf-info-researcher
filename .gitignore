@@ -3,4 +3,4 @@ history/*
 hist_content.txt
 
 #Ignore errors
-errors.txt
+error.txt
