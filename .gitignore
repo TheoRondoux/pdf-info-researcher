@@ -1,5 +1,6 @@
 #Ignore history files
 history/*
+hist_content.txt
 
 #Ignore errors
 errors.txt
