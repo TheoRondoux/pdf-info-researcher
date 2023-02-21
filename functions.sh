@@ -4,6 +4,10 @@ input_keyword_rofi(){
 }
 
 create_file(){
+     if [[ $(look_for_dir 'history') -eq 0 ]]
+     then
+	mkdir history
+     fi
      isFilePresent=$(find history/"$1.txt" 2>> error.txt)
      if [[ isFilePresent != "" ]]
      then
@@ -30,4 +34,17 @@ call_rofi(){
     else
 	rofi -e "No file found for the keyword"
     fi
+}
+
+look_for_dir(){
+    found_dir=0
+    for directory in ./*
+    do
+	if [[ -d $directory ]] && [[ "${directory##*/}" == "$1" ]]
+	then
+	    found_dir=1
+	fi
+    done
+
+    echo "$found_dir"
 }

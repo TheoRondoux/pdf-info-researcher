@@ -1,0 +1,3 @@
+find: ‘history/*’: Aucun fichier ou dossier de ce type
+find: ‘history/*’: Aucun fichier ou dossier de ce type
+find: ‘history/*’: Aucun fichier ou dossier de ce type
