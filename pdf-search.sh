@@ -6,7 +6,7 @@ source functions.sh
 #Function to fetch all the previous researches
 old_research(){
     touch hist_content.txt					#Creating a temporary file
-    find history/* > hist_content.txt 2>> errors.txt		#Checking if the are any previous researches
+    find history/* > hist_content.txt 2>> error.txt		#Checking if the are any previous researches
     file=$(call_rofi "Choose a file" hist_content.txt)		#Displaying all the options fount or a message if no previous researches found
     if [[ $? -ne 0 ]]						#If there is any error, exiting the program
     then
@@ -24,7 +24,7 @@ new_research(){
     xdg-open $(call_rofi "Select a file to open" history/"$keyword.txt") 1>> error.txt	#Opening the file wantend by the user
 }
 
-#Empty errors.txt
+#Empty error.txt
 > error.txt
 
 #Getting the option chosen by the user
