@@ -23,7 +23,7 @@ sudo apt install pdfgrep
 3. Launch the script using `./pdf-search.sh` in the app's folder.
 4. Follow the instructions displayed on your screen.
 
-⚠ The researches are case sensitive!
+**⚠ The researches are case sensitive!**
 
 ## License
 See `LICENSE.md`
