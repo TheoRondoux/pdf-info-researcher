@@ -20,7 +20,7 @@ sudo apt install pdfgrep
 ## How to use
 1. Create a folder `/home/USER/.config/pdf_search/`.
 2. In the folder `pdf_search`, create a file named `config.txt` and put all the absolute path of the folders you want to browse for your futures researches.
-3. Launch the script using `./pdf-search.sh`.
+3. Launch the script using `./pdf-search.sh` in the app's folder.
 4. Follow the instructions displayed on your screen.
 
 ## License
