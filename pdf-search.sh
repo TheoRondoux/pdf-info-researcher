@@ -1,17 +1,25 @@
 #!/bin/bash
 
 #Import all the functions
-source functions.sh
+source utils/functions.sh
+source utils/dir_management.sh
+
+#If the folder history does not exists, create it
+if [[ $(look_for_dir history) -eq 0 ]]
+then
+    mkdir history
+fi
 
 #Function to fetch all the previous researches
 old_research(){
     touch hist_content.txt					#Creating a temporary file
     find history/* > hist_content.txt 2>> error.txt		#Checking if the are any previous researches
-    file=$(call_rofi "Choose a file" hist_content.txt)		#Displaying all the options fount or a message if no previous researches found
-    if [[ $? -ne 0 ]]						#If there is any error, exiting the program
+    if [[ $? -ne 0 ]]						#If there is any error, displaying a message and exiting the program
     then
+	display_rofi_message 'No previous researches to show' 
 	exit 1
     fi
+    file=$(call_rofi "Choose a file" hist_content.txt)			#Displaying all the options fount or a message if no previous researches foun
     rm hist_content.txt							#Deleteting the temporary file
     xdg-open $(call_rofi "Select a file to open" $file) 1>> error.txt	#Opening the file chosen by the user
 }
@@ -28,7 +36,7 @@ new_research(){
 > error.txt
 
 #Getting the option chosen by the user
-option=$(call_rofi "Choose an option" options.txt)
+option=$(call_rofi "Choose an option" utils/options.txt)
 
 #Depending on the option, calling the right function
 case $option in
