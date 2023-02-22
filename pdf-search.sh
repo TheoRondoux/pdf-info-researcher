@@ -17,6 +17,7 @@ old_research(){
     if [[ $? -ne 0 ]]						#If there is any error, displaying a message and exiting the program
     then
 	display_rofi_message 'No previous researches to show' 
+	rm hist_content.txt
 	exit 1
     fi
     file=$(call_rofi "Choose a file" hist_content.txt)			#Displaying all the options fount or a message if no previous researches foun
