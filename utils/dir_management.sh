@@ -1,4 +1,4 @@
-look_for_dir(){
+look_for_dir(){				#Function that looks for a specific directory
     found_dir=0
     for directory in ./*
     do
@@ -11,7 +11,7 @@ look_for_dir(){
     echo "$found_dir"
 }
 
-list_config_dirs(){
+list_config_dirs(){			#Function that retrieves all the folders indicated in the config file
     while read elem
     do
 	if [[ $elem == /* ]]
